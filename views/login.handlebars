@@ -1,0 +1,10 @@
+{{#if user}}
+    <h1>Bienvenido, {{user.first_name}}</h1>
+    <a href="/perfil">Ir al perfil</a>
+{{else}}
+    <form method="POST" action="/api/login">
+        <input type="email" name="email" placeholder="Correo" required />
+        <input type="password" name="password" placeholder="Contraseña" required />
+        <button type="submit">Iniciar sesión</button>
+    </form>
+{{/if}}
